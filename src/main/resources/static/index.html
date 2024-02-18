@@ -2,61 +2,58 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <title>Bestilling av kinobilletter</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinobilletter</title>
+    <script src="javascript.js"></script>
 </head>
 <body>
-<script type="text/javascript">
-
-    let personArray = [];
-
-    for(let i in personArray){
-        document.write ()
-    }
-
-
-
-</script>
     <h1>Bestilling av kinobilletter</h1>
 
-    <div id="velgFilm">
-    <p>Velg film: </p>
-    </div>
+    <table>
+        <tr>
+            <td><label for="film">Velg film:</label></td>
+            <td>
+                <select id="film" style="width:200px">
+                    <!-- Dropdown med film valg -->
+                    <option value="-">Velg film her</option>
+                    <option value="Me before you">Me before you</option>
+                    <option value="Interstellar">Interstellar</option>
+                    <option value="Titanic">Titanic</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="antall">Antall</label></td>
+            <td><input type="number" id="antall" style="width:30px" required></td>
+            <td><span id="antall-error" class="error-message"></span></td>
+        </tr>
+        <tr>
+            <td><label for="fornavn">Fornavn</label></td>
+            <td><input type="text" id="fornavn" required></td>
+            <td><span id="fornavn-error" class="error-message"></span></td>
+        </tr>
+        <tr>
+            <td><label for="etternavn">Etternavn</label></td>
+            <td><input type="text" id="etternavn" required></td>
+            <td><span id="etternavn-error" class="error-message"></span></td>
+        </tr>
+        <tr>
+            <td><label for="telefonnr">Telefonnr</label></td>
+            <td><input type="tel" id="telefonnr" pattern="[0-9]{8}" required></td>
+            <td><span id="telefonnr-error" class="error-message"></span></td>
+        </tr>
+        <tr>
+            <td><label for="epost">Epost</label></td>
+            <td><input type="email" id="epost" required></td>
+            <td><span id="epost-error" class="error-message"></span></td>
+        </tr>
+    </table>
 
-    <div id="Antall">
-        <p>Antall </p>
-    </div>
+    <button onclick="kjopBillett()">Kjøp billett</button>
 
+    <h2>Alle billetter</h2>
+    <h3 id="alleBilletter"></h3>
 
-    <div id="fornavn">
-        Fornavn
-    <input type="text" id = "inputFornavn">
-    </div>
-
-
-    <div id="Etternavn">
-        Etternavn
-        <input type="text" id = "inputEtternavn">
-    </div>
-
-
-    <div id="Telefonnr">
-        Telefonnr
-        <input type="text" id = "inputTelefonnr">
-    </div>
-
-
-    <div id="Epost">
-        Epost
-        <input type="text" id = "inputEpost">
-    </div>
-
-
-
-    <button onclick="showName('Bra')">Kjøp billett</button>
-
-    <h3>Alle billetter</h3>
-    <h4>Film (..)</h4>
-    <button onclick=>Slett alle billettene</button>
+    <button onclick="slettAlleBilletter()">Slett alle billettene</button>
 </body>
 </html>
