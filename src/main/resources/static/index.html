@@ -5,17 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinobilletter</title>
     <script src="javascript.js"></script>
-    <style>
-        /* Juster størrelsen på input-feltet for "Antall" */
-        #antall {
-            width: 30px;
-        }
-
-        /* Juster bredden på Velg film-dropdownen */
-        #film {
-            width: 200px;
-        }
-    </style>
 </head>
 <body>
     <h1>Bestilling av kinobilletter</h1>
@@ -24,37 +13,37 @@
         <tr>
             <td><label for="film">Velg film:</label></td>
             <td>
-                <select id="film">
-                    <!-- Populate this dropdown with film options -->
-                    <option value="Film 1">Velg film her</option>
-                    <option value="Film 2">Velg film her</option>
-
+                <select id="film" style="width:200px">
+                    <!-- Dropdown med film valg -->
+                    <option value="-">Velg film her</option>
+                    <option value="Me before you">Me before you</option>
+                    <option value="Interstellar">Interstellar</option>
+                    <option value="Titanic">Titanic</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><label for="antall">Antall:</label></td>
-            <td><input type="number" id="antall" size="2" required></td>
+            <td><label for="antall">Antall</label></td>
+            <td><input type="number" id="antall" style="width:30px" required></td>
             <td><span id="antall-error" class="error-message"></span></td>
         </tr>
-
         <tr>
-            <td><label for="fornavn">Fornavn:</label></td>
+            <td><label for="fornavn">Fornavn</label></td>
             <td><input type="text" id="fornavn" required></td>
             <td><span id="fornavn-error" class="error-message"></span></td>
         </tr>
         <tr>
-            <td><label for="etternavn">Etternavn:</label></td>
+            <td><label for="etternavn">Etternavn</label></td>
             <td><input type="text" id="etternavn" required></td>
             <td><span id="etternavn-error" class="error-message"></span></td>
         </tr>
         <tr>
-            <td><label for="telefonnr">Telefonnr:</label></td>
+            <td><label for="telefonnr">Telefonnr</label></td>
             <td><input type="tel" id="telefonnr" pattern="[0-9]{8}" required></td>
             <td><span id="telefonnr-error" class="error-message"></span></td>
         </tr>
         <tr>
-            <td><label for="epost">Epost:</label></td>
+            <td><label for="epost">Epost</label></td>
             <td><input type="email" id="epost" required></td>
             <td><span id="epost-error" class="error-message"></span></td>
         </tr>

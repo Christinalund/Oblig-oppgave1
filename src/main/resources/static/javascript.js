@@ -4,7 +4,7 @@ let billetter = [];
 
 // Kjøp billett-funksjon
 function kjopBillett() {
-    // Henter verdier fra inputfeltene
+    // Henter verdier fra input-feltene
     const film = document.getElementById("film").value;
     const antall = document.getElementById("antall").value;
     const fornavn = document.getElementById("fornavn").value;
@@ -12,9 +12,9 @@ function kjopBillett() {
     const telefonnr = document.getElementById("telefonnr").value;
     const epost = document.getElementById("epost").value;
 
-    // Validerer inputfeltene
+    // Validerer input-feltene
     if (!isValidAntall(antall)) {
-        displayErrorMessage("antall", "Må skrive inn et gyldig antall");
+        displayErrorMessage("antall", "Må skrive noe inn i antall");
         return;
     }
 
@@ -59,6 +59,7 @@ function kjopBillett() {
 
 }
 
+// Valideringsfunksjoner til input-feltene
 function isValidAntall(value) {
     return /^\d+$/.test(value) && parseInt(value) > 0;
 }
